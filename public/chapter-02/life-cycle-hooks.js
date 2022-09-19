@@ -2,9 +2,11 @@ var APP_LOG_LIFECYCLE_EVENTS = true;
 
 var webstore = new Vue({
 	el: "#app",
-	data: {
+	data: function() {
+return {
 		sitename: "Vue.js Pet Depot",
-	},
+	};
+},
 	beforeCreate: function() {
 		if (APP_LOG_LIFECYCLE_EVENTS) {
 			console.log("beforeCreate");
@@ -35,12 +37,12 @@ var webstore = new Vue({
 			console.log("updated");
 		}
 	},
-	beforeDestroy:  function() {
+	beforeUnmount:  function() {
 		if (APP_LOG_LIFECYCLE_EVENTS) {
 			console.log("beforeDestroy ");
 		}
 	},
-	destroyed:  function() {
+	unmounted:  function() {
 		if (APP_LOG_LIFECYCLE_EVENTS) {
 			console.log("destroyed");
 		}
