@@ -1,4 +1,4 @@
-# study
+# Examples
 
 ## Project setup
 ```
